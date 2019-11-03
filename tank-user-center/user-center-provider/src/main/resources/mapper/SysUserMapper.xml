@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tank.user.mapper.SysUserMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tank.user.entity.SysUser">
+       <result column="id" property="id" />
+       <result column="createId" property="createId" />
+       <result column="createName" property="createName" />
+       <result column="createTime" property="createTime" />
+       <result column="updateId" property="updateId" />
+       <result column="updateTime" property="updateTime" />
+       <result column="updateName" property="updateName" />
+       <result column="delFlag" property="delFlag" />
+       <result column="loginName" property="loginName" />
+       <result column="password" property="password" />
+       <result column="realName" property="realName" />
+       <result column="mobile" property="mobile" />
+       <result column="phone" property="phone" />
+       <result column="email" property="email" />
+       <result column="photo" property="photo" />
+       <result column="status" property="status" />
+       <result column="deptId" property="deptId" />
+       <result column="jobId" property="jobId" />
+       <result column="remark" property="remark" />
+    </resultMap>
+
+</mapper>

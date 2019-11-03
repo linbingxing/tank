@@ -1,5 +1,5 @@
 server:
-  port: 9850
+  port: 9851
 
 spring:
   cloud:
@@ -14,14 +14,14 @@ spring:
     allow-bean-definition-overriding: true
 
 dubbo:
+  scan:
+    base-packages: com.tank.user
   protocols:
     dubbo:
       name: dubbo
       port: -1
   registry:
     address: spring-cloud://localhost
-  cloud:
-    subscribed-services: tank-user-center
 
 #开启端点
 management:

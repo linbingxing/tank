@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tank.user.mapper.SysDictTypeMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tank.user.entity.SysDictType">
+       <result column="id" property="id" />
+       <result column="createId" property="createId" />
+       <result column="createName" property="createName" />
+       <result column="createTime" property="createTime" />
+       <result column="updateId" property="updateId" />
+       <result column="updateTime" property="updateTime" />
+       <result column="updateName" property="updateName" />
+       <result column="delFlag" property="delFlag" />
+       <result column="code" property="code" />
+       <result column="name" property="name" />
+       <result column="description" property="description" />
+       <result column="sysFlag" property="sysFlag" />
+       <result column="status" property="status" />
+       <result column="sort" property="sort" />
+    </resultMap>
+
+</mapper>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.tank.user.mapper.SysLogMapper">
+
+    <!-- 通用查询映射结果 -->
+    <resultMap id="BaseResultMap" type="com.tank.user.entity.SysLog">
+       <result column="id" property="id" />
+       <result column="createId" property="createId" />
+       <result column="createName" property="createName" />
+       <result column="createTime" property="createTime" />
+       <result column="updateId" property="updateId" />
+       <result column="updateTime" property="updateTime" />
+       <result column="updateName" property="updateName" />
+       <result column="delFlag" property="delFlag" />
+       <result column="loginName" property="loginName" />
+       <result column="loginType" property="loginType" />
+       <result column="module" property="module" />
+       <result column="method" property="method" />
+       <result column="requestIp" property="requestIp" />
+       <result column="params" property="params" />
+       <result column="msg" property="msg" />
+       <result column="useTime" property="useTime" />
+       <result column="remark" property="remark" />
+    </resultMap>
+
+</mapper>
