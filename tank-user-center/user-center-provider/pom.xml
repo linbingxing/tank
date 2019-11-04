@@ -28,6 +28,11 @@
             <artifactId>spring-cloud-starter-dubbo</artifactId>
         </dependency>
 
+        <dependency>
+            <groupId>org.flywaydb</groupId>
+            <artifactId>flyway-core</artifactId>
+            <version>${flywaydb.version}</version>
+        </dependency>
     </dependencies>
 
 </project>

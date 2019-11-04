@@ -3,7 +3,7 @@ spring:
     name: tank-user-center
   datasource:
     type: com.alibaba.druid.pool.DruidDataSource
-    url: jdbc:mysql://192.168.10.52:3306/baking_user_center?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false
+    url: jdbc:mysql://192.168.10.52:3306/tank_user_center?allowMultiQueries=true&useUnicode=true&characterEncoding=UTF-8&zeroDateTimeBehavior=convertToNull&tinyInt1isBit=false
     username: root
     password: root
     driver-class-name: com.mysql.jdbc.Driver
@@ -28,6 +28,9 @@ spring:
     filters: stat,log4j
     # 通过connectProperties属性来打开mergeSql功能；慢SQL记录
     connectionProperties: druid.stat.mergeSql=true;druid.stat.slowSqlMillis=5000
+  flyway:
+    enabled: true
+    baseline-on-migrate: true
 
 mybatis-plus:
   mapper-locations: classpath:/mapper/*Mapper.xml
