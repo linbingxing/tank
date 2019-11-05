@@ -1,5 +1,6 @@
 package com.tank.user.controller;
 
+import com.baomidou.mybatisplus.core.conditions.query.QueryWrapper;
 import com.tank.common.emuns.ErrorCode;
 import com.tank.common.model.Result;
 import com.tank.user.api.ISysUserServiceApi;
@@ -48,6 +49,11 @@ public class SysUserController implements ISysUserServiceApi {
             result.setErrorCode(ErrorCode.NOT_FIND);
         }
         return result;
+    }
+
+    @Override
+    public SysUser findByLoginName(String loginName) {
+        return sysUserService.getOne(new QueryWrapper<SysUser>().eq("loginName",loginName));
     }
 
 

@@ -49,6 +49,18 @@ public class Result<T> implements Serializable {
         return this;
     }
 
+    public static Result ok(String msg) {
+        Result r = new Result();
+        r.setMessage(msg);
+        return r;
+    }
+
+    public static Result ok(Object data) {
+        Result r = new Result();
+        r.setData(data);
+        return r;
+    }
+
     public T getData() {
         return data;
     }

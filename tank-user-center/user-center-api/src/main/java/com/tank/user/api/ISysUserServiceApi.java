@@ -13,5 +13,7 @@ import com.tank.user.entity.SysUser;
 public interface ISysUserServiceApi {
 
     public Result<SysUser> getById(String pkid);
+
+    SysUser findByLoginName(String loginName);
 }
 

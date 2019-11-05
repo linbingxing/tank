@@ -1,6 +1,5 @@
 package com.tank.admin.controller;
 
-import com.tank.common.emuns.ErrorCode;
 import com.tank.common.model.Result;
 import com.tank.user.api.ISysUserServiceApi;
 import com.tank.user.entity.SysUser;
@@ -8,6 +7,7 @@ import io.swagger.annotations.Api;
 import io.swagger.annotations.ApiOperation;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.dubbo.config.annotation.Reference;
+import org.springframework.security.access.prepost.PreAuthorize;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -32,6 +32,7 @@ public class SysUserController {
      */
     @ApiOperation(value = "根据id查询系统用户",notes= "根据id查询系统用户")
     @GetMapping(value = "/getById")
+    @PreAuthorize("hasAuthority('sys:user:view')")
     public Result<SysUser> getById(@RequestParam("pkid") String pkid){
         Result<SysUser> result = sysUserServiceApi.getById(pkid);
         return result;
